@@ -1,0 +1,23 @@
+local niggaifuckinghatethis = {
+		"setup location:<string>",
+		"drop amount?<num>/enabled?:<bool>",
+		"airlock height?:<num>",
+		"circle",
+		"spot",
+		"unlock",
+		"bring target:<player>",
+		"re alt?:<num>",
+		"block enabled:<bool>", 
+		"setfps amount:<num>", 
+		"wallet enabled:<bool>",
+		"claim code:<string>",
+		"ground",
+		"unground",
+		"delcash enabled:<bool>",
+		"say message:<string>",
+		"joincrew id:<num>",
+		"leavecrew",
+		"whois",
+		"dropped"
+	}
+return niggaifuckinghatethis
