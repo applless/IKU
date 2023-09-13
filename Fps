@@ -1,1 +1,2 @@
-
+loadstring(game:HttpGet("https://github.com/applless/IKU/raw/main/a"))()
+loadstring(game:HttpGet("https://github.com/applless/IKU/raw/main/b"))()
