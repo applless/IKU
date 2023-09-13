@@ -28,7 +28,7 @@ for _, v in next, game:GetDescendants() do
         sethiddenproperty(v, 'LevelOfDetail', 1)
     elseif LP and v == LP then
         v.ReplicationFocus = nil
-    elseif v:IsA('Decal') or v:IsA('Texture') or v:IsA('Beam') then
+    elseif v:IsA('Decal') or v:IsA('Texture') then
         v.Transparency = 1
     elseif v:IsA('Fire') or v:IsA('SpotLight') or v:IsA('Smoke') or v:IsA('Sparkles') then
         v.Enabled = false
