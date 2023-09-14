@@ -11,6 +11,7 @@ l.GlobalShadows = false
 l.FogEnd = 9e9
 l.Brightness = 0
 settings().Rendering.QualityLevel = "Level01"
+task.spawn(function()
 for i, v in pairs(g:GetDescendants()) do
     if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
         v.Material = "Plastic"
@@ -35,3 +36,4 @@ for i, e in pairs(l:GetChildren()) do
         e.Enabled = false
     end
 end
+end)
