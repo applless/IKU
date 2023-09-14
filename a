@@ -7,6 +7,7 @@ UserSettings():GetService('UserGameSettings').MasterVolume = 0
 setsimulationradius(0, 0)
 
 --// Physical/UI Derender
+task.spawn(function()
 for _, v in next, game:GetDescendants() do
     if v:IsA('Workspace') then
         sethiddenproperty(v, 'StreamingTargetRadius', 64)
@@ -67,6 +68,8 @@ for _, v in next, game:GetDescendants() do
         v.Volume = 0
     end
 end
+end)
+
 
 local WorkspaceChildAdded;WorkspaceChildAdded = workspace.DescendantAdded:Connect(function(v)
     wait()
@@ -74,7 +77,7 @@ local WorkspaceChildAdded;WorkspaceChildAdded = workspace.DescendantAdded:Connec
         sethiddenproperty(v, 'LevelOfDetail', 1)
     elseif LP and v == LP then
         v.ReplicationFocus = nil
-    elseif v:IsA('Decal') or v:IsA('Texture') or v:IsA('Beam') then
+    elseif v:IsA('Decal') or v:IsA('Texture') then
         v.Transparency = 1
     elseif v:IsA('Fire') or v:IsA('SpotLight') or v:IsA('Smoke') or v:IsA('Sparkles') then
         v.Enabled = false
