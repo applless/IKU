@@ -1,2 +1,26 @@
---// 😈
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7e2a6c0db68ed3c2d6003de7d98f4411.lua"))()
+
+task.spawn(function()
+    repeat task.wait(0.33) until (game:GetService("CoreGui"):FindFirstChild("IKU") ~= nil)
+    print("main ui found.")
+
+    task.wait(2)
+
+    local IsToggled = false
+    local Button = Instance.new("TextButton")
+    Button.Parent = game:GetService("CoreGui").IKU
+    Button.AnchorPoint = Vector2.new(1, 0.5)
+    Button.Position = UDim2.new(1, 0, 0.5, 0)
+    Button.BackgroundTransparency = 1 
+    Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Button.Text = "Console"
+    Button.Size = UDim2.new(0, 82, 0, 26)
+    Button.TextSize = 20
+    Button.TextTransparency = 0.7 
+
+    Button.Activated:Connect(function()
+        IsToggled = not IsToggled
+
+        game:GetService("StarterGui"):SetCore("DevConsoleVisible", IsToggled)                         
+    end)
+end)
